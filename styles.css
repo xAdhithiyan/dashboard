@@ -197,19 +197,24 @@ img[alt="github"]:hover{
 } 
 .your-projects > div{
     box-sizing: border-box;
-    background-color:;
+    background-color:var(--bg-color);
     border-radius: 15px;
     border:2px solid black;
     height: 300px;
     margin-left:10px;
     margin-right:10px;
 } 
-.your-projects img{
+.sub-heading img{
     height:40px;
 }
 
 /* layout for project boxes */
-.box-1{
+.box-1,
+.box-2,
+.box-3,
+.box-4,
+.box-5,
+.box-6{
     display: grid;
     grid-template-rows: 80px 1fr;
 
@@ -231,6 +236,7 @@ img[alt="github"]:hover{
     display: grid;
     grid-template-columns: auto 1fr;
     grid-auto-flow:column;
+    grid-auto-columns: 38px;
     align-items:center;
     margin:10px;
 }
@@ -251,8 +257,82 @@ img[alt="github"]:hover{
     line-height: 0.6;
     margin:-4px;
 }
-
-.java{
+.language{
     margin-left:-15px;
     margin-top: 3px;
+}
+.fork,
+.star{
+    height:35px;
+}
+.fork:hover,
+.star:hover{
+    height:38px;
+}
+
+/* layout and styling for "Explore Reporistories" */
+.explore-repositories{
+    background-color: var(--bg-color);
+    border-radius: 15px;
+    overflow: auto;
+    border: 2px solid black;
+}
+.repo{
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    grid-template-rows: 40px;
+    padding: 10px;
+    padding-bottom: 0px;
+    padding-left:20px;
+    align-items: center;
+}
+#descrip{
+    grid-column: 1 / 3;
+}
+
+.repositories img,
+.repositories img:hover{
+    height: 30px;
+    border-radius: 50%;
+}
+.repo-footer{
+    grid-column: 1 / 3;
+    display: grid;
+    grid-template-columns: 25px 1fr;
+    grid-auto-flow: column;
+    align-items: center;
+}
+hr{
+    width: 90%;
+}
+h2{
+    margin-left: 25px;
+}
+
+/* styling and layout for "Chats" */
+.chats{
+    display: grid;
+    gap:20px;
+    background-color: var(--bg-color);
+    padding:10px;
+    border: 2px solid black;
+    border-radius: 15px;
+    overflow:auto;
+}
+.chats img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.chats > div{
+    display: grid;
+    grid-template-columns: 65px 1fr;
+    align-items: center;
+}
+.chats > div > div > div:nth-child(1){
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.chats > div > div > div:nth-child(2){
+    font-size: 0.9rem;
 }
